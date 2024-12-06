@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>About | Book Haven Bookstore</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./styles.css">
+        <script src="https://kit.fontawesome.com/9089a812d0.js" crossorigin="anonymous"></script>
+        <style>
+            #page-body {
+                display: grid;
+                grid-template-rows: auto auto auto auto auto;
+                grid-template-columns: auto;
+                justify-items: center;
+        
+                hr {
+                    width: 100%;
+                }
+        
+                #contact-info {
+                    margin: 0;
+                }
+        
+                #contact-info,
+                #contact-form-wrap {
+                    width: 350px;
+                }
+
+                #contact-form-wrap {
+                    margin-bottom: 16px;
+                }
+        
+            }
+        
+            @media screen and (min-width: 769px) {
+                #page-body {
+                    display: grid;
+                    grid-template-columns: auto 33px auto;
+                    grid-template-rows: auto 33px auto;
+                    justify-items: center;
+                    justify-content: center;
+        
+                    #about {
+                        grid-row: 1 / 2;
+                        grid-column: 1 / span 3;
+                    }
+        
+                    hr:first-of-type {
+                        grid-column: 1 / span 3;
+                        margin: 16px 0;
+                        width: 100%;
+                    }
+        
+                    hr:last-of-type {
+                        margin: 0 16px;
+                        width: 0;
+                    }
+        
+                    #contact-form-wrap {
+                        grid-column: 1 / 2;
+                        grid-row: 3 / 3;
+                    }
+        
+                    #contact-info {
+                        grid-column: 3 / 3;
+                        grid-row: 3 / 3;
+                    }
+                }
+            }
+        
+            @media screen and (min-width: 1000px) {
+                #page-body {
+        
+                    #contact-info,
+                    #contact-form-wrap {
+                        width: 75%;
+                    }
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <header id="site-header" class="no-overflow">
+            <div><a href="index.html"><img src="images/Client3_LogoPalette1_2E4057.png" alt="Book Haven Bookstore Logo"></a></div>
+            <div><a href="index.html"><h1>Book Haven Bookstore</h1></a></div>
+            <div id="site-nav">
+                <button id="site-nav-menu-button"><i id="site-nav-menu-btn" class="fa-solid fa-bars"></i></button>
+                <nav id="site-nav-menu" class="hidden">
+                    <a href="index.html">Home</a>
+                    <a href="gallery.html">Gallery</a>
+                    <a class="active-page" href="about.html"><span class="marker">You are on </span>About</a>
+                    <a href="events.html">Events</a>
+                    <a id="nav-signin-btn" href="javascript:void(0)">Sign In</a>
+                    <a id="nav-view-cart-btn" href="javascript:void(0)">View Cart</a>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Sign-In Window (hidden by default) -->
+        <div id="signin-wnd-wrap" class="hidden">
+            <div class="bookish-bg-color parchment-color">
+                <h2>Sign In</h2>
+                <i id="signin-wnd-close-btn" class="close-btn medium-font fa-solid fa-xmark"></i>
+                <form id="signin-form" method="post">
+                    <p>
+                        <label for="user-name">Email Address<br>
+                            <input id="user-name" name="user-name" type="email" value="sumone@mail.domain.com">
+                        </label>
+                    </p>
+                    <p>
+                        <label for="password">Password<br>
+                            <input id="password" name="password" type="password" value="300k#@veN!">
+                        </label>
+                    </p>
+                    <p>
+                        <input type="submit" value="Sign In">
+                    </p>
+                </form>
+            </div>
+        </div>
+
+        <!-- Shopping Cart (hidden by default) -->
+        <div id="shopping-cart" class="hidden">
+            <div class="bookish-bg-color parchment-color">
+                <h2>Shopping Cart</h2>
+                <i id="cart-close-btn" class="close-btn medium-font fa-solid fa-xmark"></i>
+                <div id="cart-contents">
+                    <!-- Filled in with JavaScript -->
+                </div>
+            </div>
+        </div>
+        
+        <!-- Page Body Main -->        
+        <main id="page-body">
+            <section id="about">
+                <h2>About Us</h2>
+                <p class="indent">Book Haven Bookstore is a local treasure for book enthusiasts, oﬀering a diverse selection of books,
+                    magazines, journals, and oﬃce supplies. With a deep-rooted commitment to fostering literary exploration and a
+                    love for reading, it is embarking on the creation of an online presence that mirrors its dedication to the world of                    
+                    words.</p>
+                <p class="indent">Serving a broad audience of book lovers and knowledge seekers, its central goal is to amplify its
+                    visibility, cultivate a vibrant literary community, and simplify the process of book inquiries and purchases. Its
+                    target audience comprises avid readers, students, and individuals in search of high-quality reading materials
+                    and oﬃce essentials. Book Haven Bookstore's website theme revolves around celebrating the written word,
+                    creating an inviting digital space that encourages literary discovery, and supporting intellectual growth.</p>
+            </section>
+            <hr>
+            <section id="contact-info">
+                <h2>Contact Information</h2>
+                <div class="clear-both">
+                    <div class="float-left">
+                        <ul>
+                            <li>
+                                <span class="bold medium-font">Address</span>
+                                <ul>
+                                    <li>
+                                        <a href="#maps_link">123 Bookstore Lane<br>
+                                            Somecity, ST 12345</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <span class="bold medium-font">Phone</span>
+                                <ul>
+                                    <li>
+                                        <a href="#tel:+1-555-555-5555">1 (555) 555-5555</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <span class="bold medium-font">Email</span>
+                                <ul>
+                                    <li>
+                                        <a href="#mailto:info@bookhaven.com">info@bookhaven.com</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="float-right">
+                        <ul>
+                            <li><span class="bold medium-font">Store Hours</span></li>
+                            <li>
+                                <span class="bold">Monday - Friday</span>
+                                <ul>
+                                    <li>
+                                        9:00 AM - 8:00 PM
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <span class="bold">Saturday</span>
+                                <ul>
+                                    <li>
+                                        10:00 AM - 6:00 PM
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <span class="bold">Sunday</span>
+                                <ul>
+                                    <li>
+                                        11:00 AM - 5:00 PM
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <hr>
+            <section id="contact-form-wrap">
+                <form id="contact-form" method="post" action="" autocomplete="on">
+                    <h2>Contact Form</h2>
+                    <p>
+                        <label for="given-name" class="medium-font">First Name</label><br>
+                        <input id="given-name" name="given-name" type="text" placeholder="John" required autocomplete="given-name">
+                    </p>
+                    <p>
+                        <label for="family-name" class="medium-font">Last Name</label><br>
+                        <input id="family-name" name="family-name" type="text" placeholder="Doe" required autocomplete="family-name">
+                    </p>
+                    <p>
+                        <label for="email" class="medium-font">Email</label><br>
+                        <input id="email" name="email" type="email" placeholder="yourname@example.com" required autocomplete="email">
+                    </p>
+                    <p>
+                        <label for="contact-message" class="medium-font">Message</label><br>
+                        <textarea id="contact-message" name="message" rows="5" minlength="25" placeholder="What would you like to tell us?" required autocomplete="off"></textarea>
+                    </p>
+                    <p>
+                        <span class="medium-font">Are you placing a custom order?</span><br>
+                        <label for="custom-yes"><input id="custom-yes" name="custom-order" type="radio" value="true">&nbsp;Yes</label>
+                        <label for="custom-no"><input id="custom-no" name="custom-order" type="radio" value="false" checked>&nbsp;No</label>
+                        <br>&nbsp;
+                    </p>
+                    <p class="clear-both">
+                        <input type="reset" class="float-left">
+                        <input type="submit" class="float-right">
+                    </p>
+                </form>
+            </section>
+        </main>
+        <footer id="site-footer">
+            <form id="newsletter-signup" method="post">
+                <label for="newsletter-email">Sign up for our newsletter</label>
+                <div id="newsletter">
+                    <input id="newsletter-email" type="email" name="newsletter-email" placeholder="yourname@example.com" autocomplete="email" required>
+                    <button type="submit" id="newsletter-signup-btn"><i class="fa-solid fa-chevron-right"></i></button>
+                </div>
+            </form>
+
+            <div id="site-footer-social-bar">
+                <span><a href="#" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a></span>
+                <span><a href="#" title="X / Twitter"><i class="fa-brands fa-x-twitter"></i></a></span>
+                <span><a href="#" title="Instagram"><i class="fa-brands fa-instagram"></i></a></span>
+                <span><a href="#" title="YouTube"><i class="fa-brands fa-youtube"></i></a></span>
+            </div>
+
+            <div id="site-footer-links" class="clear-both">
+                <ul class="float-left text-left">
+                    <li><a href="#site-footer">Accessibility</a></li>
+                    <li><a href="#site-footer">Careers</a></li>
+                    <li><a href="#site-footer">Site Map</a></li>
+                    <li><a href="about.html#contact-form">Contact Us</a></li>
+                </ul>
+                <ul class="float-right text-right">
+                    <li><a href="#site-footer">Returns & Refunds</a></li>
+                    <li><a href="#site-footer">Terms of Use</a></li>
+                    <li><a href="#site-footer">Privacy Policy</a></li>
+                    <li><a href="#site-footer">Cookies</a></li>
+                </ul>
+            </div>
+        </footer>
+    </body>
+    <script src="./scripts.js"></script>
+</html>
